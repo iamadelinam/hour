@@ -10,7 +10,9 @@ CREATE Table authorization (
 ALTER TABLE
   table authorization
 ADD
-  user_name VARCHAR (250) NOT NULL [AFTER user_mail];
+  user_name VARCHAR(250) NOT NULL
+AFTER
+  user_mail;
 CREATE Table categories (
     id INT PRIMARY KEY AUTO_INCREMENT,
     title VARCHAR (250) NOT NULL,
