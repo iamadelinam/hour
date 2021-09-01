@@ -1,4 +1,5 @@
-CREATE DATABASE hours-app
+CREATE DATABASE hoursApp;
+USE hoursApp;
 
 CREATE Table authorization (
   id INT PRIMARY KEY AUTO_INCREMENT,
@@ -12,7 +13,7 @@ CREATE Table authorization (
 CREATE Table categories (
   id INT PRIMARY KEY AUTO_INCREMENT,
   title VARCHAR (250) NOT NULL,
-  authorization_id INT NOT NULL,
+  authorization_id INT NOT NULL
 );
 
 CREATE Table activities (
