@@ -4,6 +4,7 @@ import moment from "moment";
 import Header from "../Components/Header/Header";
 import MonthlyStatictics from "../Components/Statistics/MonthlyStat";
 import OverAllStatictics from "../Components/Statistics/OverAllStat";
+import "../Components/Statistics/statistics.css";
 function Statisctics() {
   const params = useParams();
   const [category, setCategory] = useState();
@@ -54,16 +55,19 @@ function Statisctics() {
   return (
     <>
       <Header />
-      <button onClick={goBack}>Назад</button>
+      <div className="btn-wrapper">
+        <button className="go-back" onClick={goBack}>Назад</button>
+      </div>
+
       {category && (
         <div className="statictics">
           <header className="activity-title">
             <h1 className="activity-title-h1">{category.title}</h1>
           </header>
-          <div>
+          <div className="statisctics-wrapper">
             <MonthlyStatictics data={currentMonthActivities} />
           </div>
-          <div>
+          <div className="statisctics-wrapper">
             <OverAllStatictics data={totalActivities} />
           </div>
         </div>
