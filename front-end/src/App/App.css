@@ -1,0 +1,117 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #aabfff;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+/* .App {
+  width: 100%;
+  height: 100%;
+} */
+
+.page-in-general {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.greeting {
+  width: 40%;
+  height: 40%;
+  background-color: #ffffff;
+  border: 0px solid #ffffff;
+  border-radius: 30px;
+  box-shadow: 0px 21px 18px -13px rgba(34, 60, 80, 0.31);
+  box-sizing: content-box;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500&family=Raleway:wght@200;400&display=swap");
+
+h1,
+h2,
+.reg-or-log,
+.texts,
+.inputs-titles,
+.inputs,
+.reg-or-log-buttons,
+.quote,
+.write-activity-name,
+.set-time-digits,
+.set-time-letter,
+.p-activity-name {
+  font-family: "Raleway";
+  /* font-family: "Comfortaa"; */
+}
+.reg-or-log {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: center;
+  margin-top: 5%;
+}
+
+.texts {
+  text-align: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  font-size: 20px;
+}
+
+.inputs-titles {
+  text-align: start;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.inputs {
+  height: 25px;
+  border: 1px solid black;
+  border-radius: 7px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #ffffff;
+}
+
+.reg-or-log-buttons {
+  width: max-content;
+  height: 30px;
+  background: #ffeedb;
+  border: 1px solid #ffeedb;
+  border-radius: 30px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+
+
+.window {
+  position: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  inset: 0px;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 99999;
+  transition: opacity 1s ease-in 0s;
+  pointer-events: auto;
+  overflow-y: auto;
+}

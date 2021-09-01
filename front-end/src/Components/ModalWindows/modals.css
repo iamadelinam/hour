@@ -1,0 +1,59 @@
+.write-activity {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.write-activity-name {
+  width: 80%;
+  height: 23px;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 20px;
+  border: 1px solid #aabfff;
+  border-radius: 6px;
+}
+
+.write-activity-btn {
+  width: max-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 10px;
+}
+
+.set-time {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.set-time-sections {
+  width: 40%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.set-time-digits {
+  width: 50px;
+  height: 50px;
+  box-shadow: -2px 0px 9px 0px rgb(34 60 80 / 22%) inset;
+  border: 0px solid #ffffff;
+  border-radius: 12px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.set-time-letters {
+  margin: 0px;
+  font-size: 22px;
+}
+
+.check-mark {
+  width: 30px;
+  height: 30px;
+}
