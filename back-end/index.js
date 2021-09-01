@@ -93,12 +93,12 @@ app.get(
             ).startOf("month");
         const maxDate = moment().endOf("month");
 
-        console.log(minDate, maxDate);
         const enrichedData = [];
         const amountOfDaysBetweenDates = Math.ceil(
           moment.duration(maxDate.diff(minDate)).asDays()
         );
 
+        let veryTotalAmountOfMinutes = 0;
         for (let i = 0; i < amountOfDaysBetweenDates; i++) {
           const lookingForDate = moment(minDate).add(i, "day");
           const activitiesForGivenDate = data.filter((activity) => {
@@ -115,10 +115,13 @@ app.get(
               0
             );
           }
+          veryTotalAmountOfMinutes += totalAmountOfMinutes;
 
           enrichedData.push({
-            time_stamp: lookingForDate.toDate(),
-            act_minutes: totalAmountOfMinutes,
+            time_stamp: lookingForDate.format("YYYY-MM-DD"),
+            act_minutes: req.query.time_stamp
+              ? totalAmountOfMinutes
+              : veryTotalAmountOfMinutes,
             category_id: req.params.categoryId,
             authorization_id: req.user.id,
           });

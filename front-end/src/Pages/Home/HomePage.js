@@ -32,13 +32,13 @@ function HomePage() {
     setCategories([...categories, category]);
   };
 
-  const nextMonth = () => {
-    setCurrentDate(moment(currentDate).add(1, "M").toDate());
-  };
+  // const nextMonth = () => {
+  //   setCurrentDate(moment(currentDate).add(1, "M").toDate());
+  // };
 
-  const prevMonth = () => {
-    setCurrentDate(moment(currentDate).subtract(1, "M").toDate());
-  };
+  // const prevMonth = () => {
+  //   setCurrentDate(moment(currentDate).subtract(1, "M").toDate());
+  // };
 
   return (
     <div className="page-in-general">
@@ -49,24 +49,24 @@ function HomePage() {
       <div className="change-month">
         {/* <button className="reg-or-log-buttons"> {"<"} </button> */}
         {/* <button> */}{" "}
-        <img
+        {/* <img
           src="https://cdn-icons-png.flaticon.com/512/860/860790.png"
           alt="<"
           className="reg-or-log-buttons no-background"
           onClick={prevMonth}
-        />{" "}
+        />{" "} */}
         {/* </button> */}
         <h2 className="month">
           {moment(currentDate).locale("RU").format("MMMM")}
         </h2>
         {/* <button className="reg-or-log-buttons"> {">"} </button>{" "} */}
         {/* <button > */}
-        <img
+        {/* <img
           src="https://cdn-icons-png.flaticon.com/512/892/892528.png"
           alt=">"
           className="reg-or-log-buttons no-background"
           onClick={nextMonth}
-        />
+        /> */}
         {/* </button>{" "} */}
       </div>
       <div className="main-div">

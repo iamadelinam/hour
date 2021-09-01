@@ -47,7 +47,7 @@ function Statisctics() {
       });
   };
 
-  useEffect(getData, []);
+  useEffect(getData, [params.categoryId]);
   const goBack = () => {
     history.push("/home");
   };

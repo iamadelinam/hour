@@ -24,7 +24,7 @@ function CalendarItem({ title, id, date, changeDate }) {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         setActivities(data);
       });
   }, [id, date]);
@@ -61,6 +61,7 @@ function CalendarItem({ title, id, date, changeDate }) {
       .then((response) => response.json())
       .then((data) => {
         setActivities([...activities, data]);
+        console.log(data);
       });
   };
   const fillInputHour = (event) => {
