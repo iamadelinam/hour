@@ -1,3 +1,4 @@
+CREATE DATABASE hours-app
 
 CREATE Table authorization (
   id INT PRIMARY KEY AUTO_INCREMENT,
