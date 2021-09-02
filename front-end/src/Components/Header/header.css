@@ -3,8 +3,13 @@
 .header {
   width: 100%;
   background: #ffeedb;
+  
+  /* background: #81A684; */
+
   display: flex;
 }
+
+
 
 .header__title {
   font-family: "Raleway";

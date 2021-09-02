@@ -24,3 +24,6 @@ CREATE Table activities (
   act_minutes INT NOT NULL,
   authorization_id INT NOT NULL
 );
+
+
+select * from authorization

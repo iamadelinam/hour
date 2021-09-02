@@ -7,7 +7,7 @@ import "./statistics.css";
 // import moment from "moment";
 
 function MonthlyStatictics({ data }) {
-  const [currentDate, setCurrentDate] = useState(new Date());
+  const currentDate = useState(new Date());
   return (
     <div className="progress">
       <div>

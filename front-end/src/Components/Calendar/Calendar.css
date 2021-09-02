@@ -33,6 +33,7 @@
   align-items: center;
 }
 
+
 .div-activity-name {
   background-color: white;
   border-radius: 8px;
@@ -99,3 +100,14 @@
 /* .react-calendar__month-view__days__da {
   background-color: salmon;
 } */
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}

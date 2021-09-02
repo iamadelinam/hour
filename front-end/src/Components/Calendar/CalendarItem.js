@@ -70,6 +70,9 @@ function CalendarItem({ title, id, date, changeDate }) {
 
   const fillInputMinute = (event) => {
     setInputMinute(event.target.value);
+    // if (event.target.value = "-") {
+    //   return;
+    // }
   };
 
   const handleDateChange = (newDate) => {
@@ -98,6 +101,7 @@ function CalendarItem({ title, id, date, changeDate }) {
       ) {
         return true;
       }
+      return false
     });
 
     if (hasActivitiesThisDay) {
@@ -127,13 +131,16 @@ function CalendarItem({ title, id, date, changeDate }) {
           defaultView={"month"}
           onClickDay={handleShowModal}
           tileClassName={getTileClassNames}
+          maxDetail={"month"}
         />
         <Modal show={show} onClose={handleModalClose}>
           <div className="set-time">
             <div className="set-time-sections">
               <input
-                type="text"
+                type="number"
+                step="1"
                 className="set-time-digits"
+                min="0"
                 value={inputHour}
                 onChange={fillInputHour}
                 placeholder="ч"
@@ -144,7 +151,9 @@ function CalendarItem({ title, id, date, changeDate }) {
 
             <div className="set-time-sections">
               <input
-                type="text"
+                type="number"
+                step="1"
+                min="0"
                 className="set-time-digits"
                 value={inputMinute}
                 onChange={fillInputMinute}

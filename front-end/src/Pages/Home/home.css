@@ -33,7 +33,7 @@
 
 .activities {
   display: flex;
-  width: 100%;
+  width: 75%;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-evenly;
@@ -56,3 +56,4 @@
   background-color: #aabfff;
   border: 0px solid #aabfff;
 }
+
