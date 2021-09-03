@@ -2,7 +2,8 @@
 
 .header {
   width: 100%;
-  background: #ffeedb;
+  /* background: #ffeedb; */
+  background: #ffe2c2;
   display: flex;
 }
 
