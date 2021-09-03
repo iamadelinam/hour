@@ -6,5 +6,5 @@ cd ..
 rm -rf back-end/public
 mv front-end/build back-end/public
 
-git push -f heroku main
+git push -f heroku add-heroku-deploy:main
 
