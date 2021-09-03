@@ -7,6 +7,7 @@ import { Route } from "react-router-dom";
 import CalendarItem from "../Components/Calendar/CalendarItem";
 import ActivityName from "../Components/ModalWindows/ModalActivityName";
 import Statisctics from "../Pages/StatistictPage";
+// import Example from "../Components/example";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <Route path="/activityname" exact component={ActivityName} />
       <Route path="/calendaritem" exact component={CalendarItem} />
       <Route path="/statisctics/:categoryId" exact component={Statisctics} />
+      {/* <Route path="/example" exact component={Example} /> */}
     </>
   );
 }

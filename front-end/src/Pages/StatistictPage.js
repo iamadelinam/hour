@@ -62,7 +62,11 @@ function Statisctics() {
       <div className="btn-wrapper">
         <button className="go-back" onClick={goBack}>Назад</button>
       </div>
-
+      {/* <div className="btn-wrapper">
+        <button className="go-back" onClick={goBack}>Назад</button>
+        <button className="go-back">Таймер</button>
+        <button className="go-back">Совет</button>
+      </div> */}
       {category && (
         <div className="statictics">
           <header className="activity-title">

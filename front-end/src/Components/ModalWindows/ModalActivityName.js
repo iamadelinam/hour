@@ -11,8 +11,11 @@ export default function ModalActivityName({ onNewCategoryAdded }) {
 
   const handleHideModal = () => {
     setShow(false);
-    setInputValue("")
-    
+    // if ((inputValue = "")) {
+    //   return;
+    // }
+    setInputValue("");
+
     return fetch(`http://localhost:3333/categories`, {
       body: JSON.stringify({
         title: inputValue,
