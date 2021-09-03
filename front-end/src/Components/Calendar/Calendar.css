@@ -8,18 +8,15 @@
 }
 
 .chosen {
-  background-color: #c0aaff;
+  /* background-color: #c0aaff; */
+  background-color: #ad91ff;
 }
 
 .with-activity {
-  background-color: 	#aaeaff;
-  /* border: 1px solid #ffaabf !important; */
-}
-/* 
-.div-activity-name {
-  display: flex;
+  /* background-color: #aaeaff; */
+  background-color: #91e4ff;
 
-} */
+}
 
 .calendar-item {
   display: flex;
@@ -35,7 +32,7 @@
 
 
 .div-activity-name {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 8px;
   margin-bottom: 0px;
   display: flex;
@@ -62,45 +59,9 @@
   border: 0px;
 }
 .react-calendar__month-view__weekdays__weekday {
-  background-color: #aabfff;
+  /* background-color: #aabfff; */
+  background-color: #91acff;
 }
-/* 
-.react-calendar__tile,
-.react-calendar__tile--now,
-.react-calendar__tile--active,
-.react-calendar__tile--range,
-.react-calendar__tile--rangeStart,
-.react-calendar__tile--rangeEnd,
-.react-calendar__tile--rangeBothEnds,
-.react-calendar__month-view__days__da {
-  border-radius: 50%;
-} */
-
-/* .react-calendar__tile {
-  background-color: violet;
-} */
-/* .react-calendar__tile--now {
-  background-color: rebeccapurple;
-} */
-/* .react-calendar__tile--active {
-  background-color: teal;
-} */
-/* .react-calendar__tile--range {
-  background-color: yellowgreen;
-} */
-/* .react-calendar__tile--rangeStart {
-  background-color: indianred;
-} */
-/* .react-calendar__tile--rangeEnd {
-  background-color: olive;
-} */
-/* .react-calendar__tile--rangeBothEnds {
-  background-color: greenyellow;
-} */
-/* .react-calendar__month-view__days__da {
-  background-color: salmon;
-} */
-
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

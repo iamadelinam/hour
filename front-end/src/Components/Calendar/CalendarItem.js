@@ -24,7 +24,6 @@ function CalendarItem({ title, id, date, changeDate }) {
     )
       .then((response) => response.json())
       .then((data) => {
-        // console.log(data);
         setActivities(data);
       });
   }, [id, date]);
@@ -65,14 +64,17 @@ function CalendarItem({ title, id, date, changeDate }) {
       });
   };
   const fillInputHour = (event) => {
+    if (Number(event.target.value) < 0) {
+      return;
+    }
     setInputHour(event.target.value);
   };
 
   const fillInputMinute = (event) => {
+    if (Number(event.target.value) < 0) {
+      return;
+    }
     setInputMinute(event.target.value);
-    // if (event.target.value = "-") {
-    //   return;
-    // }
   };
 
   const handleDateChange = (newDate) => {
@@ -101,7 +103,7 @@ function CalendarItem({ title, id, date, changeDate }) {
       ) {
         return true;
       }
-      return false
+      return false;
     });
 
     if (hasActivitiesThisDay) {

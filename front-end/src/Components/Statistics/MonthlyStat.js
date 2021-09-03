@@ -1,25 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 import moment from "moment";
 import { BarChart, Bar, CartesianGrid, XAxis, YAxis, Tooltip } from "recharts";
-
 import "./statistics.css";
-// import chart from "../../images/chart.png";
-// import moment from "moment";
+
 
 function MonthlyStatictics({ data }) {
-  const currentDate = useState(new Date());
   return (
     <div className="progress">
       <div>
         {" "}
         <h2 className="progress-h2">
           {" "}
-          {moment(currentDate).locale("RU").format("MMMM")}
+          {moment().locale("RU").format("MMMM")} 
         </h2>{" "}
       </div>
-
-      {/* <img className="st-example" src={chart} alt="статистика" /> */}
-      {/* <div className="st-example"></div> */}
       <BarChart
         width={800}
         height={300}

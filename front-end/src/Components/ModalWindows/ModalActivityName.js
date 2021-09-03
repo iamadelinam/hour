@@ -27,10 +27,6 @@ export default function ModalActivityName({ onNewCategoryAdded }) {
       .then((newCategory) => {
         onNewCategoryAdded(newCategory);
       });
-    // POST to /categories
-    // to create new category
-    // with name in body
-    // and then call onNewCategoryAdded with server respose data
   };
 
   const fillInputValue = (event) => {

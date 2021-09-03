@@ -11,6 +11,7 @@ function Statisctics() {
   const [currentMonthActivities, setCurrentMonthActivities] = useState([]);
   const [totalActivities, setTotalActivities] = useState([]);
   const history = useHistory();
+
   const getData = () => {
     fetch(`http://localhost:3333/categories/${params.categoryId}`, {
       headers: {
@@ -35,6 +36,7 @@ function Statisctics() {
       .then((res) => res.json())
       .then((data) => {
         setCurrentMonthActivities(data);
+        console.log(moment().format("YYYY-MM-DD"));
       });
 
     fetch(`http://localhost:3333/categories/${params.categoryId}/activities`, {
@@ -49,9 +51,11 @@ function Statisctics() {
   };
 
   useEffect(getData, [params.categoryId]);
+
   const goBack = () => {
     history.push("/home");
   };
+
   return (
     <>
       <Header />
