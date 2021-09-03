@@ -15,6 +15,7 @@ export default function ModalActivityName({ onNewCategoryAdded }) {
     setInputValue("");
 
     return fetch(`${HOST}/categories`, {
+
       body: JSON.stringify({
         title: inputValue,
       }),
@@ -28,10 +29,6 @@ export default function ModalActivityName({ onNewCategoryAdded }) {
       .then((newCategory) => {
         onNewCategoryAdded(newCategory);
       });
-    // POST to /categories
-    // to create new category
-    // with name in body
-    // and then call onNewCategoryAdded with server respose data
   };
 
   const fillInputValue = (event) => {

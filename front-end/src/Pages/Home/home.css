@@ -1,4 +1,3 @@
-
 .month {
   background-color: rgba(255, 255, 255, 0.8);
   border-radius: 6px;
@@ -42,6 +41,10 @@
   font-size: 20px;
   background-color: #ffffff;
   border-color: #ffffff;
+  color: black;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 .example {
   width: 150px;
@@ -53,7 +56,8 @@
 }
 
 .no-background {
-  background-color: #aabfff;
-  border: 0px solid #aabfff;
+  /* background-color: #aabfff; */
+  background-color: #91acff;
+  /* border: 0px solid #aabfff; */
+  border: 0px solid #91acff;
 }
-

@@ -1,7 +1,13 @@
 import React from "react";
 import "./statistics.css";
-// import chart from "../../images/chart.png";
-import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip } from "recharts";
+import {
+  LineChart,
+  Line,
+  CartesianGrid,
+  XAxis,
+  YAxis,
+  Tooltip,
+} from "recharts";
 
 function OverAllStatictics({ data }) {
   return (
@@ -10,7 +16,6 @@ function OverAllStatictics({ data }) {
         {" "}
         <h2 className="progress-h2">Общий прогресс</h2>{" "}
       </div>
-      {/* <img className="st-example" src={chart} alt="статистика"/> */}
       <LineChart
         width={800}
         height={300}
@@ -23,7 +28,6 @@ function OverAllStatictics({ data }) {
         <YAxis />
         <Tooltip />
       </LineChart>
-      {/* <div className="st-example"></div> */}
     </div>
   );
 }

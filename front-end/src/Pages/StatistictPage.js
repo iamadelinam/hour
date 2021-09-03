@@ -13,6 +13,7 @@ function Statisctics() {
   const [currentMonthActivities, setCurrentMonthActivities] = useState([]);
   const [totalActivities, setTotalActivities] = useState([]);
   const history = useHistory();
+
   const getData = () => {
     fetch(`${HOST}/categories/${params.categoryId}`, {
       headers: {
@@ -37,6 +38,7 @@ function Statisctics() {
       .then((res) => res.json())
       .then((data) => {
         setCurrentMonthActivities(data);
+        console.log(moment().format("YYYY-MM-DD"));
       });
 
     fetch(`${HOST}/categories/${params.categoryId}/activities`, {
@@ -51,9 +53,11 @@ function Statisctics() {
   };
 
   useEffect(getData, [params.categoryId]);
+
   const goBack = () => {
     history.push("/home");
   };
+
   return (
     <>
       <Header />
@@ -62,7 +66,11 @@ function Statisctics() {
           Назад
         </button>
       </div>
-
+      {/* <div className="btn-wrapper">
+        <button className="go-back" onClick={goBack}>Назад</button>
+        <button className="go-back">Таймер</button>
+        <button className="go-back">Совет</button>
+      </div> */}
       {category && (
         <div className="statictics">
           <header className="activity-title">

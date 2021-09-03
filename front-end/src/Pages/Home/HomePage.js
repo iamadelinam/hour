@@ -8,14 +8,12 @@ import "./home.css";
 import { HOST } from "../../api";
 
 function HomePage() {
-  // function addActivity() {}
   const [categories, setCategories] = useState([]);
   const [currentDate, setCurrentDate] = useState(new Date());
 
   useEffect(() => {
-    // Fetch categories from server
-    // using GET request
     return fetch(`${HOST}/categories`, {
+
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -25,8 +23,6 @@ function HomePage() {
         console.log(data);
         setCategories(data);
       });
-
-    // and setCategories with the result of fetch
   }, []);
 
   const addCategory = (category) => {
