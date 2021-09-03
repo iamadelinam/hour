@@ -5,6 +5,7 @@ import "./Calendar.css";
 import { useHistory } from "react-router-dom";
 import Modal from "simple-react-modal";
 import moment from "moment";
+import HOST from "../../api";
 
 function CalendarItem({ title, id, date, changeDate }) {
   const [activities, setActivities] = useState([]);
@@ -13,9 +14,9 @@ function CalendarItem({ title, id, date, changeDate }) {
 
   useEffect(() => {
     return fetch(
-      `http://localhost:3333/categories/${id}/activities?time_stamp=${moment(
-        date
-      ).format("YYYY-MM-DD")}`,
+      `${HOST}/categories/${id}/activities?time_stamp=${moment(date).format(
+        "YYYY-MM-DD"
+      )}`,
       {
         headers: {
           Authorization: localStorage.getItem("token"),
@@ -46,7 +47,7 @@ function CalendarItem({ title, id, date, changeDate }) {
 
   const onConfirmActivityClick = () => {
     handleModalClose();
-    fetch(`http://localhost:3333/categories/${id}/activities`, {
+    fetch(`${HOST}/categories/${id}/activities`, {
       body: JSON.stringify({
         categoryId: id,
         timeStamp: moment(date).format("YYYY-MM-DD"),
@@ -101,7 +102,7 @@ function CalendarItem({ title, id, date, changeDate }) {
       ) {
         return true;
       }
-      return false
+      return false;
     });
 
     if (hasActivitiesThisDay) {

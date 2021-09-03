@@ -5,6 +5,7 @@ import CalendarItem from "../../Components/Calendar/CalendarItem";
 import Header from "../../Components/Header/Header";
 import ModalActivityName from "../../Components/ModalWindows/ModalActivityName";
 import "./home.css";
+import { HOST } from "../../api";
 
 function HomePage() {
   // function addActivity() {}
@@ -14,7 +15,7 @@ function HomePage() {
   useEffect(() => {
     // Fetch categories from server
     // using GET request
-    return fetch(`http://localhost:3333/categories`, {
+    return fetch(`${HOST}/categories`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },

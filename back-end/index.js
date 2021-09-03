@@ -3,11 +3,16 @@ const cors = require("cors");
 const bcrypt = require("bcrypt");
 const uuid = require("uuid");
 const moment = require("moment");
+const fs = require("fs");
 const db = require("./db.js");
 const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+
+if (fs.existsSync("./public")) {
+  app.use(express.static("./public"));
+}
 
 app.post("/registration", (req, res) => {
   const salt = bcrypt.genSaltSync(13);

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Modal from "simple-react-modal";
 import "./modals.css";
+import { HOST } from "../../api";
 
 export default function ModalActivityName({ onNewCategoryAdded }) {
   const [show, setShow] = useState(false);
@@ -11,9 +12,9 @@ export default function ModalActivityName({ onNewCategoryAdded }) {
 
   const handleHideModal = () => {
     setShow(false);
-    setInputValue("")
-    
-    return fetch(`http://localhost:3333/categories`, {
+    setInputValue("");
+
+    return fetch(`${HOST}/categories`, {
       body: JSON.stringify({
         title: inputValue,
       }),

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import HOST from "../api";
 
 function putUser(login, password) {
-  return fetch(`http://localhost:3333/login`, {
+  return fetch(`${HOST}/login`, {
     body: JSON.stringify({
       mail: login,
       password: password,
