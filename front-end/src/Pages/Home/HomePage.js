@@ -5,13 +5,15 @@ import CalendarItem from "../../Components/Calendar/CalendarItem";
 import Header from "../../Components/Header/Header";
 import ModalActivityName from "../../Components/ModalWindows/ModalActivityName";
 import "./home.css";
+import { HOST } from "../../api";
 
 function HomePage() {
   const [categories, setCategories] = useState([]);
   const [currentDate, setCurrentDate] = useState(new Date());
 
   useEffect(() => {
-    return fetch(`http://localhost:3333/categories`, {
+    return fetch(`${HOST}/categories`, {
+
       headers: {
         Authorization: localStorage.getItem("token"),
       },

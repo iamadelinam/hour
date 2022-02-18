@@ -5,6 +5,8 @@ import Header from "../Components/Header/Header";
 import MonthlyStatictics from "../Components/Statistics/MonthlyStat";
 import OverAllStatictics from "../Components/Statistics/OverAllStat";
 import "../Components/Statistics/statistics.css";
+import { HOST } from "../api";
+
 function Statisctics() {
   const params = useParams();
   const [category, setCategory] = useState();
@@ -13,7 +15,7 @@ function Statisctics() {
   const history = useHistory();
 
   const getData = () => {
-    fetch(`http://localhost:3333/categories/${params.categoryId}`, {
+    fetch(`${HOST}/categories/${params.categoryId}`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -24,7 +26,7 @@ function Statisctics() {
       });
 
     fetch(
-      `http://localhost:3333/categories/${
+      `${HOST}/categories/${
         params.categoryId
       }/activities?time_stamp=${moment().format("YYYY-MM-DD")}`,
       {
@@ -39,7 +41,7 @@ function Statisctics() {
         console.log(moment().format("YYYY-MM-DD"));
       });
 
-    fetch(`http://localhost:3333/categories/${params.categoryId}/activities`, {
+    fetch(`${HOST}/categories/${params.categoryId}/activities`, {
       headers: {
         Authorization: localStorage.getItem("token"),
       },
@@ -60,7 +62,9 @@ function Statisctics() {
     <>
       <Header />
       <div className="btn-wrapper">
-        <button className="go-back" onClick={goBack}>Назад</button>
+        <button className="go-back" onClick={goBack}>
+          Назад
+        </button>
       </div>
       {/* <div className="btn-wrapper">
         <button className="go-back" onClick={goBack}>Назад</button>

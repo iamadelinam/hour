@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import HOST from "../api";
 
 function postNewUser(name, mail, password) {
-  return fetch(`http://localhost:3333/registration`, {
+  return fetch(`${HOST}/registration`, {
     body: JSON.stringify({
       name: name,
       mail: mail,
